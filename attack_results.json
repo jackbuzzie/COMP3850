@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "shadow_ks": [
+      5,
+      10,
+      15
+    ],
+    "main_k": 15,
+    "features": [
+      "prob",
+      "dist_from_boundary",
+      "recon_error",
+      "latent_diff_norm"
+    ],
+    "shadow_files": {
+      "5": "shadow_attack_features_k5.npy",
+      "10": "shadow_attack_features_k10.npy",
+      "15": "shadow_attack_features_k15.npy"
+    },
+    "target_members": 32000,
+    "target_nonmembers": 8000,
+    "bootstrap_rounds": 200
+  },
+  "target_rlm": {
+    "linkage_acc_train": 0.959625,
+    "linkage_acc_test": 0.93375
+  },
+  "target_standardised_gap": {
+    "prob": 0.009037608280777931,
+    "dist_from_boundary": 0.09499510377645493,
+    "recon_error": 0.012273422442376614,
+    "latent_diff_norm": -0.007405546493828297
+  },
+  "shadow_phase": {
+    "5": {
+      "rows": 199995,
+      "mean_gap": {
+        "prob": -0.0006710290908813477,
+        "dist_from_boundary": 0.01362544298171997,
+        "recon_error": 0.00017381878569722176,
+        "latent_diff_norm": 0.0031409263610839844
+      },
+      "standardised_gap": {
+        "prob": -0.0014940815744921565,
+        "dist_from_boundary": 0.13065625727176666,
+        "recon_error": 0.02267577312886715,
+        "latent_diff_norm": 0.0046300385147333145
+      },
+      "per_shadow_model_d_dist_from_boundary": [
+        0.12120827287435532,
+        0.1274556964635849,
+        0.14055733382701874,
+        0.11266309767961502,
+        0.15193147957324982
+      ]
+    },
+    "10": {
+      "rows": 399990,
+      "mean_gap": {
+        "prob": 0.0003241002559661865,
+        "dist_from_boundary": 0.013616502285003662,
+        "recon_error": 0.0001466730609536171,
+        "latent_diff_norm": -0.0004423856735229492
+      },
+      "standardised_gap": {
+        "prob": 0.000721670628990978,
+        "dist_from_boundary": 0.13049206137657166,
+        "recon_error": 0.021081827580928802,
+        "latent_diff_norm": -0.0006656270124949515
+      },
+      "per_shadow_model_d_dist_from_boundary": [
+        0.11908958107233047,
+        0.1231757402420044,
+        0.11312717199325562,
+        0.11712906509637833,
+        0.13314597308635712,
+        0.16079488396644592,
+        0.12087485194206238,
+        0.14009931683540344,
+        0.15632463991641998,
+        0.12307484447956085
+      ]
+    },
+    "15": {
+      "rows": 599985,
+      "mean_gap": {
+        "prob": -0.0005733370780944824,
+        "dist_from_boundary": 0.014040589332580566,
+        "recon_error": 0.0001465831883251667,
+        "latent_diff_norm": 0.0004487037658691406
+      },
+      "standardised_gap": {
+        "prob": -0.0012756396317854524,
+        "dist_from_boundary": 0.13510343432426453,
+        "recon_error": 0.020441271364688873,
+        "latent_diff_norm": 0.0006803672877140343
+      },
+      "per_shadow_model_d_dist_from_boundary": [
+        0.14504343271255493,
+        0.12271992117166519,
+        0.1251976042985916,
+        0.1110595241189003,
+        0.15209269523620605,
+        0.1404554694890976,
+        0.13096430897712708,
+        0.15110106766223907,
+        0.13343773782253265,
+        0.1591656506061554,
+        0.12430405616760254,
+        0.134910449385643,
+        0.12905961275100708,
+        0.12610191106796265,
+        0.14304184913635254
+      ]
+    }
+  },
+  "attack_phase": {
+    "5": {
+      "shadow_models_train": 4,
+      "shadow_models_validation": 1,
+      "shadow_val_auc": 0.553507962898145,
+      "threshold": 0.5079497669833041,
+      "target_auc": 0.54900696875,
+      "target_auc_ci": [
+        0.5430737864314445,
+        0.5564738569190293
+      ],
+      "tpr_at_1pct_fpr": 0.0159375,
+      "tpr_at_0.1pct_fpr": 0.0025,
+      "tpr_at_threshold": 0.647625,
+      "fpr_at_threshold": 0.5815,
+      "balanced_accuracy": 0.5330625,
+      "single_feature_auc": {
+        "prob": 0.503060134765625,
+        "dist_from_boundary": 0.516002857421875,
+        "recon_error": 0.49419680859375004,
+        "latent_diff_norm": 0.49718797460937497
+      },
+      "permutation_importance": {
+        "prob": [
+          0.004745101005050323,
+          0.0009447087823855169
+        ],
+        "dist_from_boundary": [
+          0.014462934396719937,
+          0.0007669044463612801
+        ],
+        "recon_error": [
+          0.06723633806690343,
+          0.0009465699268349278
+        ],
+        "latent_diff_norm": [
+          0.03242370410187182,
+          0.0021555580242617373
+        ]
+      }
+    },
+    "10": {
+      "shadow_models_train": 8,
+      "shadow_models_validation": 2,
+      "shadow_val_auc": 0.5564151645082254,
+      "threshold": 0.49919834858351675,
+      "target_auc": 0.548985853515625,
+      "target_auc_ci": [
+        0.5422101346104972,
+        0.5566735239328643
+      ],
+      "tpr_at_1pct_fpr": 0.01653125,
+      "tpr_at_0.1pct_fpr": 0.00096875,
+      "tpr_at_threshold": 0.75259375,
+      "fpr_at_threshold": 0.69,
+      "balanced_accuracy": 0.531296875,
+      "single_feature_auc": {
+        "prob": 0.503060134765625,
+        "dist_from_boundary": 0.516002857421875,
+        "recon_error": 0.49419680859375004,
+        "latent_diff_norm": 0.49718797460937497
+      },
+      "permutation_importance": {
+        "prob": [
+          0.006786786211359012,
+          0.0006022494219808172
+        ],
+        "dist_from_boundary": [
+          0.011416750065683656,
+          0.0008703360079740087
+        ],
+        "recon_error": [
+          0.062445422529547344,
+          0.0010622656532565452
+        ],
+        "latent_diff_norm": [
+          0.020922369458724832,
+          0.001099746055017633
+        ]
+      }
+    },
+    "15": {
+      "shadow_models_train": 12,
+      "shadow_models_validation": 3,
+      "shadow_val_auc": 0.5602326802451234,
+      "threshold": 0.5004478257387228,
+      "target_auc": 0.54716217578125,
+      "target_auc_ci": [
+        0.5409226620321298,
+        0.5538903027664461
+      ],
+      "tpr_at_1pct_fpr": 0.0148125,
+      "tpr_at_0.1pct_fpr": 0.00271875,
+      "tpr_at_threshold": 0.6956875,
+      "fpr_at_threshold": 0.63775,
+      "balanced_accuracy": 0.52896875,
+      "single_feature_auc": {
+        "prob": 0.503060134765625,
+        "dist_from_boundary": 0.516002857421875,
+        "recon_error": 0.49419680859375004,
+        "latent_diff_norm": 0.49718797460937497
+      },
+      "permutation_importance": {
+        "prob": [
+          0.010887345574456845,
+          0.00020294118450677273
+        ],
+        "dist_from_boundary": [
+          0.013512566082699537,
+          0.00017045992407893645
+        ],
+        "recon_error": [
+          0.0623942758128652,
+          0.002108192457987087
+        ],
+        "latent_diff_norm": [
+          0.0350397158503557,
+          0.0004611937862960592
+        ]
+      }
+    }
+  },
+  "figures": {
+    "shadow_distribution": "attack_figures\\fig1_shadow_dist_from_boundary.png",
+    "effect_sizes": "attack_figures\\fig2_effect_size_by_K.png",
+    "target_training": "attack_figures\\fig3_target_training_curves.png",
+    "roc": "attack_figures\\fig4_roc_curves.png",
+    "score_hist": "attack_figures\\fig5_attack_score_hist.png",
+    "importance": "attack_figures\\fig6_feature_importance.png"
+  }
+}
